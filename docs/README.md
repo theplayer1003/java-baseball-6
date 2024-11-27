@@ -23,7 +23,11 @@ ___
 6. 객체를 생성하라
    - NumberFactory -> UserNumber
 7. 볼, 스트라이크를 판단하라
-   - BaseballGame
+   - BaseballGame -> Judge
+
+   1. 볼을 판단하라
+   - 
+   2. 스트라이크를 판단하라
 8. 판단 결과를 출력하라
    - OutputHandler
 9. 3스트라이크가 나올때까지 7번-8번을 반복하라

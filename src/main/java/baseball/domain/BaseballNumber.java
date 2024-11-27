@@ -4,16 +4,32 @@ import java.util.Objects;
 
 public class BaseballNumber {
     private final int number;
+    private final int sequence;
 
-    public BaseballNumber(int number) {
+    public BaseballNumber(int number, int sequence) {
         validateRange(number);
         this.number = number;
+        this.sequence = sequence;
     }
 
     private void validateRange(int number) {
         if (number < 1 || number > 9) {
             throw new IllegalArgumentException("숫자는 1부터 9까지의 정수만 사용합니다.");
         }
+    }
+
+    public boolean checkBallCount(BaseballNumber other) {
+        if (sequence == other.sequence) {
+            return false;
+        }
+        return equals(other);
+    }
+
+    public boolean checkStrikeCount(BaseballNumber other) {
+        if (sequence != other.sequence) {
+            return false;
+        }
+        return equals(other);
     }
 
     @Override
